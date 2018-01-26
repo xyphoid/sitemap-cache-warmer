@@ -120,7 +120,16 @@ class PHP_Warmer
             {
                 foreach($sitemap->url as $single_url)
                 {
-                    $urls[] = (string)$single_url->loc;
+
+                    if($this->get_parameter('category')) {
+                      // only do category entries
+                      if(((string)($single_url->priority)) == "0.5") {
+                        $urls[] = (string)$single_url->loc;
+                      }
+                    } else {
+                      // do all entries
+                      $urls[] = (string)$single_url->loc;
+                    }
                 }
             }
 

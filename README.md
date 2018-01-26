@@ -22,6 +22,7 @@ http://example.com/warm-cache/warm.php?key=SECRET_KEY&url=http://example.com/sit
 **sleep** - Amount of time to sleep between each request in seconds. Used for throttling on slow hosts. (Optional, default is to not throttle.)  
 **from** - Number of the url to start with. (Optional, default is 0).  
 **to** - Number of the url to stop. Useful to test some URLs on a heavy sitemap (Optional, default is till the end of the sitemap)
+**category** - if set, only do category URLs 
 
 #### Scheduling the crawl
 
